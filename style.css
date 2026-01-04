@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Patrick Hand', cursive;
+}
+
+body {
+  background: #F6D1D8;
+  user-select: none;
+  overflow: hidden;
+}
+
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F6D1D8;
+  border-right: 0px solid #D1193E;
+  z-index: 9;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+}
+.heart {
+  position: relative;
+}
+.heart,
+.heart:before,
+.heart:after {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #D1193E;
+  transform: rotateZ(45deg);
+}
+.heart:before,
+.heart:after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+}
+.heart:before {
+  transform: translateX(-50%);
+  -webkit-animation: animX 1.5s infinite 0.25s;
+          animation: animX 1.5s infinite 0.25s;
+}
+.heart:after {
+  transform: translateY(-50%);
+  -webkit-animation: animY 1.5s infinite;
+          animation: animY 1.5s infinite;
+}
+
+.container{
+  position: relative;
+  display: grid;
+  place-items: center;
+  max-width: 1280px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.menu-container {
+  grid-area: 1 / 1;
+  display: none;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.menu-container.show {
+  display: flex;
+}
+
+.menu-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 20px;
+  animation: fadeInDown 1s ease-out;
+}
+
+.play-button {
+  background: #d1193e;
+  color: #fae8ec;
+  border: none;
+  padding: 15px 30px;
+  width: 100%;
+  font-size: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: fadeInUp 1s ease-out;
+}
+
+.nav-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 10;
+}
+
+.button-icon {
+  border: none;
+  outline: none;
+  padding: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #D1193E;
+}
+
+.item-container {
+  grid-area: 1 / 1;
+  display: grid;
+  place-items: center;
+  position: relative;
+  max-width: 750px;
+  width: 100%;
+  transition: 0.2s;
+}
+
+.item-container .items {
+  display: none;
+  grid-area: 1 / 1;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.item-container .items.show {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.item-container .items.hide {
+  opacity: 1;
+  pointer-events: none;
+  animation: fadeOutScale 0.5s ease-out forwards;
+}
+
+.bag-container{
+  grid-area: 1 / 1;
+  display: none;
+  position: relative;
+  max-width: 750px;
+  width: 100%;
+  transition: 0.2s;
+  animation: fadeInScale 1s ease-out;
+}
+
+.bag-container.show {
+  display: block;
+}
+
+.bag-container.pop {
+  animation: bagPop 0.2s;
+}
+
+#LeftPocket,
+#RightPocket,
+#MainPocket,
+#FrontPocket {
+    cursor: pointer;
+}
+
+#LeftPocketOpen,
+#RightPocketOpen,
+#FrontPocketOpen {
+    display: none;
+}
+
+#MainPocketClose {
+    display: block;
+}
+
+#LeftPocket.open #LeftPocketOpen {
+    display: block;
+}
+#RightPocket.open #RightPocketOpen {
+    display: block;
+}
+#MainPocket.open #MainPocketClose {
+    display: none;
+}
+#FrontPocket.open #FrontPocketOpen {
+    display: block;
+}
+
+@keyframes animX {
+  0%, 25% {
+    transform: translateX(-50%);
+  }
+  50%, 75% {
+    transform: translateX(50%);
+  }
+}
+
+@keyframes animY {
+  0%, 25% {
+    transform: translateY(-50%);
+  }
+  50%, 75% {
+    transform: translateY(50%);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutScale {
+  from {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes bagPop {
+    0% {
+        transform: scale(1);
+    }
+    40% {
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.98);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

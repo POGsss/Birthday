@@ -1,0 +1,17 @@
+<svg width="100%" height="auto" viewBox="0 0 394 291" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="Export">
+        <g id="Scroll">
+            <g id="Stick">
+                <ellipse id="StickTail" cx="348.64" cy="149.957" rx="4.5" ry="2.5" transform="rotate(-5 348.64 149.957)" fill="#FFC756"/>
+                <ellipse id="StickHead" cx="339.14" cy="41.3719" rx="4.5" ry="2.5" transform="rotate(-5 339.14 41.3719)" fill="#FFC756"/>
+                <rect id="Stick_2" x="336.432" y="39.0993" width="5" height="114" rx="2.5" transform="rotate(-5 336.432 39.0993)" fill="#FFC756"/>
+            </g>
+            <rect id="Paper" x="327.08" y="46.9442" width="25" height="100" rx="5" transform="rotate(-5 327.08 46.9442)" fill="#D1193E"/>
+            <g id="String">
+                <path id="String1" d="M331.481 97.252C336.578 98.1445 348.443 96.0693 356.168 92.5827" stroke="#FFDA76" stroke-width="4" stroke-linecap="round"/>
+                <path id="String2" d="M356.168 92.5827C358.246 89.5568 363.056 85.2545 365.676 92.2528" stroke="#FFDA76" stroke-width="4" stroke-linecap="round"/>
+                <path id="String3" d="M356.168 92.5827C358.131 92.0763 362.414 92.8393 363.839 99.9421" stroke="#FFDA76" stroke-width="4" stroke-linecap="round"/>
+            </g>
+        </g>
+    </g>
+</svg>

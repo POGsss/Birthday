@@ -1,0 +1,14 @@
+<svg width="100%" height="auto" viewBox="0 0 394 291" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="Export">
+        <g id="Camera">
+            <rect id="Body" x="141.626" y="114.289" width="100" height="75" rx="10" transform="rotate(-10 141.626 114.289)" fill="#FFC756"/>
+            <rect id="Strap" x="145.967" y="138.909" width="100" height="30" transform="rotate(-10 145.967 138.909)" fill="#D1193E"/>
+            <circle id="Lens" cx="212.584" cy="142.394" r="23" transform="rotate(-10 212.584 142.394)" fill="#F6D1D8" stroke="#D63051" stroke-width="4"/>
+            <circle id="Lens1" cx="212.584" cy="142.394" r="16" transform="rotate(-10 212.584 142.394)" fill="#F6D1D8" stroke="#D63051" stroke-width="4"/>
+            <circle id="Flash" cx="225.333" cy="108.16" r="2" transform="rotate(-10 225.333 108.16)" fill="#D1193E" stroke="#D1193E"/>
+            <circle id="Flash1" cx="233.212" cy="106.771" r="3" transform="rotate(-10 233.212 106.771)" fill="#F6D1D8" stroke="#D1193E"/>
+            <path id="Shutter" d="M151.474 112.552C150.994 109.833 152.81 107.24 155.53 106.76L160.454 105.892C163.173 105.412 165.767 107.228 166.246 109.948V109.948L151.474 112.552V112.552Z" fill="#D1193E"/>
+            <rect id="Label" x="157.837" y="177.433" width="30" height="5" rx="2.5" transform="rotate(-10 157.837 177.433)" fill="#D1193E"/>
+        </g>
+    </g>
+</svg>
