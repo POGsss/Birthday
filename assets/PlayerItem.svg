@@ -1,0 +1,33 @@
+<svg width="100%" height="auto" viewBox="0 0 75 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="Container" clip-path="url(#clip0_0_1)">
+        <g id="Player">
+            <g id="EarPods1">
+                <path id="Wire" d="M33.2962 103.984C23.2962 107.484 25.8927 111.635 28.2964 112.484C36.7964 115.484 56.1961 102.267 59.2965 74.9837C61.7965 52.9837 83.2964 54.4837 66.7961 43.9836" stroke="#FFC756" stroke-linecap="round"/>
+                <line id="Stem" x1="1" y1="-1" x2="9" y2="-1" transform="matrix(0.819152 0.573576 0.573576 -0.819152 60.3334 38.1706)" stroke="#D1193E" stroke-width="2" stroke-linecap="round"/>
+                <ellipse id="Body" cx="2.5" cy="3.5" rx="2.5" ry="3.5" transform="matrix(-0.573576 0.819152 0.819152 0.573576 57.6304 35.0572)" fill="#D1193E"/>
+                <ellipse id="Speaker" cx="2.5" cy="4.5" rx="2.5" ry="4.5" transform="matrix(-0.573576 0.819152 0.819152 0.573576 55.6641 36.1219)" fill="#D1193E"/>
+            </g>
+            <g id="EarPods2">
+                <path id="Vector 1" d="M67.2965 36.9837C70.2965 47.8171 73.3965 70.1837 61.7965 72.9837C47.2965 76.4837 47.2965 89.9837 48.2965 98.4837C49.2965 106.984 46.1166 112.58 34.7965 111.984C25.2965 111.484 14.7965 103.984 33.2965 103.984" stroke="#FFC756" stroke-linecap="round"/>
+                <line id="Stem_2" x1="65.3909" y1="30.4054" x2="67.4614" y2="38.1328" stroke="#D1193E" stroke-width="2" stroke-linecap="round"/>
+                <ellipse id="Body_2" cx="65.4856" cy="28.8271" rx="2.5" ry="3.5" transform="rotate(-15 65.4856 28.8271)" fill="#D1193E"/>
+                <ellipse id="Speaker_2" cx="67.4174" cy="28.3095" rx="2.5" ry="4.5" transform="rotate(-15 67.4174 28.3095)" fill="#D1193E"/>
+            </g>
+            <rect id="Body_3" x="17.9473" y="0.43576" width="40" height="100" rx="5" transform="rotate(10 17.9473 0.43576)" fill="#FFC756"/>
+            <rect id="Screen" x="22.8143" y="7.3865" width="28" height="48" rx="1.5" transform="rotate(10 22.8143 7.3865)" fill="#F6D1D8" stroke="#D1193E" stroke-width="2"/>
+            <circle id="Pad" cx="23.7517" cy="82.6933" r="10" transform="rotate(10 23.7517 82.6933)" fill="#F6D1D8" stroke="#D1193E" stroke-width="10"/>
+            <g id="Buttons">
+                <path id="Polygon 1" d="M26.0845 82.1964C26.7463 82.6873 26.5637 83.7232 25.7739 83.9581L22.8119 84.8391C22.0994 85.0511 21.4129 84.4391 21.542 83.707L22.022 80.985C22.1511 80.2529 23.0054 79.9126 23.6025 80.3555L26.0845 82.1964Z" fill="#D1193E"/>
+                <path id="Vector" d="M31.8763 84.1259L35.3231 84.7337M33.9036 82.7064L33.2958 86.1532" stroke="#F6D1D8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path id="Vector_2" d="M12.1802 80.653L15.627 81.2607" stroke="#F6D1D8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path id="Vector_3" d="M19.4954 93.8741L20.1032 90.4273M22.5218 91.1076L20.7841 92.3243M20.7841 92.3243L22.0009 94.062M20.7841 92.3243L24.231 92.9321" stroke="#F6D1D8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path id="Vector_4" d="M26.7191 73.0623L23.2723 72.4545M26.7191 73.0623L24.9814 74.279M26.7191 73.0623L25.5024 71.3246M28.0078 71.5125L27.4 74.9594" stroke="#F6D1D8" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <clipPath id="clip0_0_1">
+            <rect width="75" height="115" fill="white"/>
+        </clipPath>
+    </defs>
+</svg>

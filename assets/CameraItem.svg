@@ -1,0 +1,14 @@
+<svg width="100%" height="auto" viewBox="0 0 105 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="Container">
+        <g id="Camera">
+            <rect id="Body" x="3" y="8" width="100" height="75" rx="10" fill="#FFC756"/>
+            <rect id="Strap" x="3" y="33" width="100" height="30" fill="#D1193E"/>
+            <circle id="Lens" cx="68" cy="48" r="23" fill="#F6D1D8" stroke="#D63051" stroke-width="4"/>
+            <circle id="Lens1" cx="68" cy="48" r="16" fill="#F6D1D8" stroke="#D63051" stroke-width="4"/>
+            <circle id="Flash" cx="86.5" cy="16.5" r="2" fill="#D1193E" stroke="#D1193E"/>
+            <circle id="Flash1" cx="94.5" cy="16.5" r="3" fill="#F6D1D8" stroke="#D1193E"/>
+            <path id="Shutter" d="M13 8C13 5.23858 15.2386 3 18 3L23 3C25.7614 3 28 5.23858 28 8V8H13V8Z" fill="#D1193E"/>
+            <rect id="Label" x="8" y="73" width="30" height="5" rx="2.5" fill="#D1193E"/>
+        </g>
+    </g>
+</svg>

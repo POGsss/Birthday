@@ -1,3 +1,5 @@
+lucide.createIcons();
+
 window.addEventListener("load", function () {
   setTimeout(loaded, 2500);
 
@@ -10,14 +12,21 @@ window.addEventListener("load", function () {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+  const playButton = document.getElementById("playButton");
+  const menu = document.getElementById("menuContainer");
+  const bag = document.getElementById("bagContainer");
+  const items = document.querySelectorAll(".items");
+  const buttonIcons = document.querySelectorAll(".button-icon");
   const collectedItems = new Set();
-  const nextButton = document.getElementById("nextButton");
+  let activePocket = null;
+  let activeContainer = null;
 
-  function checkAllCollected() {
-    if (collectedItems.size === Object.keys(pocketToItem).length) {
-      nextButton.classList.add("show");
-    }
-  }
+  const pockets = [
+    document.getElementById("LeftPocket"),
+    document.getElementById("RightPocket"),
+    document.getElementById("MainPocket"),
+    document.getElementById("FrontPocket"),
+  ];
 
   const pocketToItem = {
     LeftPocket: "player",
@@ -26,7 +35,30 @@ document.addEventListener("DOMContentLoaded", () => {
     MainPocket: "flower",
   };
 
-  const items = document.querySelectorAll(".items");
+  const buttonItem = {
+    flower: document.getElementById("buttonFlower"),
+    camera: document.getElementById("buttonCamera"),
+    scroll: document.getElementById("buttonScroll"),
+    player: document.getElementById("buttonPlayer")
+  };
+
+  const containers = {
+    flower: document.querySelector(".flower-container"),
+    camera: document.querySelector(".camera-container"),
+    scroll: document.querySelector(".scroll-container"),
+    player: document.querySelector(".player-container")
+  };
+
+  playButton.addEventListener("click", () => {
+    menu.classList.remove("show");
+    bag.classList.add("show");
+  });
+
+  function checkAllCollected() {
+    if (collectedItems.size === Object.keys(pocketToItem).length) {
+      nextButton.classList.add("show");
+    }
+  }
 
   function hideItem(item) {
     item.classList.add("hide");
@@ -49,6 +81,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
       hideItem(item);
 
+      if (buttonItem[item.id]) {
+        buttonItem[item.id].classList.add("show");
+      }
+
       if (activePocket) {
         activePocket.classList.remove("open");
         activePocket = null;
@@ -58,23 +94,31 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  const playButton = document.getElementById("playButton");
+  buttonIcons.forEach((button) => {
+    button.addEventListener("click", () => {
+      if (!collectedItems.has(button.id.replace("button", "").toLowerCase())) {
+        return;
+      }
 
-  playButton.addEventListener("click", () => {
-    document.getElementById("menuContainer").classList.remove("show");
-    document.getElementById("bagContainer").classList.add("show");
+      const containerKey = button.id.replace("button", "").toLowerCase();
+      const container = containers[containerKey];
+
+      if (activeContainer === container) {
+        container.classList.remove("show");
+        activeContainer = null;
+        bag.classList.add("show");
+        return;
+      }
+
+      if (activeContainer) {
+        activeContainer.classList.remove("show");
+      }
+
+      bag.classList.remove("show");
+      container.classList.add("show");
+      activeContainer = container;
+    });
   });
-
-  const bag = document.getElementById("bagContainer");
-
-  const pockets = [
-    document.getElementById("LeftPocket"),
-    document.getElementById("RightPocket"),
-    document.getElementById("MainPocket"),
-    document.getElementById("FrontPocket"),
-  ];
-
-  let activePocket = null;
 
   pockets.forEach((pocket) => {
     pocket.addEventListener("click", () => {

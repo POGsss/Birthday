@@ -8,10 +8,10 @@
                 <ellipse id="Speaker" cx="2.5" cy="4.5" rx="2.5" ry="4.5" transform="matrix(-0.573576 0.819152 0.819152 0.573576 73.6253 80.6382)" fill="#D1193E"/>
             </g>
             <g id="EarPods2">
+                <path id="Vector 1" d="M85.2577 81.5C88.2577 92.3334 91.3577 114.7 79.7577 117.5C65.2577 121 65.2577 134.5 66.2577 143C67.2577 151.5 64.0778 157.096 52.7577 156.5C43.2577 156 32.7577 148.5 51.2577 148.5" stroke="#FFC756" stroke-linecap="round"/>
                 <line id="Stem_2" x1="83.3521" y1="74.9217" x2="85.4226" y2="82.6491" stroke="#D1193E" stroke-width="2" stroke-linecap="round"/>
                 <ellipse id="Body_2" cx="83.4468" cy="73.3434" rx="2.5" ry="3.5" transform="rotate(-15 83.4468 73.3434)" fill="#D1193E"/>
                 <ellipse id="Speaker_2" cx="85.3786" cy="72.8258" rx="2.5" ry="4.5" transform="rotate(-15 85.3786 72.8258)" fill="#D1193E"/>
-                <path id="Vector 1" d="M85.2577 81.5C88.2577 92.3334 91.3577 114.7 79.7577 117.5C65.2577 121 65.2577 134.5 66.2577 143C67.2577 151.5 64.0778 157.096 52.7577 156.5C43.2577 156 32.7577 148.5 51.2577 148.5" stroke="#FFC756" stroke-linecap="round"/>
             </g>
             <rect id="Body_3" x="35.9085" y="44.952" width="40" height="100" rx="5" transform="rotate(10 35.9085 44.952)" fill="#FFC756"/>
             <rect id="Screen" x="40.7755" y="51.9028" width="28" height="48" rx="1.5" transform="rotate(10 40.7755 51.9028)" fill="#F6D1D8" stroke="#D1193E" stroke-width="2"/>
