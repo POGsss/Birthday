@@ -7,6 +7,11 @@
   font-family: 'Patrick Hand', cursive;
 }
 
+svg,
+svg * {
+  overflow: visible;
+}
+
 body {
   background: #F6D1D8;
   user-select: none;
@@ -58,6 +63,62 @@ body {
           animation: animY 1.5s infinite;
 }
 
+.title-container {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  text-align: center;
+  background: #D1193E;
+  padding: 10px;
+  border-radius: 10px;
+  z-index: 10;
+  animation: fadeInDown 1s ease-out;
+}
+
+.title-container.show {
+  display: block;
+}
+
+.title-container h1 {
+  padding: 20px;
+  border-radius: 10px;
+  background: #fae8ec;
+}
+
+.nav-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  z-index: 10;
+}
+
+.nav-container .button-icon {
+  display: none;
+  border: none;
+  outline: none;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #d1193e;
+  color: #fae8ec;
+}
+
+.nav-container .button-icon.show {
+  display: block;
+}
+
+.nav-container .button-icon i {
+  width: 24px;
+  height: 24px;
+  background: black;
+}
+
 .container{
   position: relative;
   display: grid;
@@ -102,37 +163,6 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   animation: fadeInUp 1s ease-out;
-}
-
-.nav-container {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  z-index: 10;
-}
-
-.button-icon {
-  display: none;
-  border: none;
-  outline: none;
-  padding: 15px;
-  border-radius: 10px;
-  cursor: pointer;
-  background: #d1193e;
-  color: #fae8ec;
-}
-
-.button-icon.show {
-  display: block;
-}
-
-.button-icon i {
-  width: 24px;
-  height: 24px;
-  background: black;
 }
 
 .bag-container{
@@ -228,7 +258,7 @@ body {
   position: relative;
   max-width: 250px;
   width: 100%;
-  height: calc(100vh - 500px);
+  height: calc(100vh - 200px);
   transition: 0.2s;
   animation: fadeInScale 1s ease-out forwards;
 }
@@ -238,6 +268,32 @@ body {
 .scroll-container.show,
 .player-container.show {
   display: grid;
+}
+
+.leaf {
+  display: block;
+  cursor: pointer;
+}
+
+.leaf.fall {
+  animation: fadeOutDown 1s ease-out forwards;
+}
+
+.shutter {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.shutter:active {
+  transform: translateY(5px);
+}
+
+.photo {
+  transform-origin: top right;
+}
+
+.photo.show {
+  animation: photoPop 7.5s ease-out forwards;
 }
 
 @keyframes animX {
@@ -266,6 +322,17 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(30px);
   }
 }
 
@@ -315,4 +382,38 @@ body {
     100% {
         transform: scale(1);
     }
+}
+
+@keyframes photoPop {
+    0% {
+        transform: translateY(0px);
+    }
+    20% {
+        transform: translateY(50px);
+    }
+    40% {
+        transform: translateY(50px);
+    }
+    60% {
+        transform: translateY(45px) translateX(-10px) rotate(-20deg);
+    }
+    80% {
+        transform: translateY(45px) translateX(-10px) rotate(-20deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(60px) translateX(-10px) rotate(-20deg);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 412px) {
+  .title-container {
+    width: calc(100% - 40px);
+  }
+
+  .nav-container {
+    width: calc(100% - 40px);
+    flex-direction: row;
+  }
 }
