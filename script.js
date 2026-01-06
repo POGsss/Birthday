@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const collectedItems = new Set();
   let activePocket = null;
   let activeContainer = null;
+  let activeButton = null;
   let currentPhoto = 0;
 
   const pockets = [
@@ -63,6 +64,8 @@ document.addEventListener("DOMContentLoaded", () => {
   function checkAllCollected() {
     if (collectedItems.size === Object.keys(pocketToItem).length) {
       document.getElementById("titleText").innerHTML = "All items collected!";
+    } else {
+      document.getElementById("titleText").innerHTML = "Check all the bag's pockets!";
     }
   }
 
@@ -115,12 +118,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   buttonIcons.forEach((button) => {
     button.addEventListener("click", () => {
-      if (!collectedItems.has(button.id.replace("button", "").toLowerCase())) {
-        return;
-      }
-
       const containerKey = button.id.replace("button", "").toLowerCase();
       const container = containers[containerKey];
+
+      if (!collectedItems.has(containerKey)) {
+        return;
+      }
 
       if (containerKey === "flower") {
         document.getElementById("titleText").innerHTML = "He loves me not";
@@ -136,6 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
         container.classList.remove("show");
         activeContainer = null;
         bag.classList.add("show");
+        button.classList.remove("active");
         checkAllCollected();
         return;
       }
@@ -144,6 +148,12 @@ document.addEventListener("DOMContentLoaded", () => {
         activeContainer.classList.remove("show");
       }
 
+      if (activeButton) {
+        activeButton.classList.remove("active");
+      }
+      
+      button.classList.add("active");
+      activeButton = button;
       bag.classList.remove("show");
       container.classList.add("show");
       activeContainer = container;

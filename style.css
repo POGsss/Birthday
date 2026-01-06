@@ -5,11 +5,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Patrick Hand', cursive;
-}
-
-svg,
-svg * {
-  overflow: visible;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
 }
 
 body {
@@ -83,7 +80,7 @@ body {
 .title-container h1 {
   padding: 20px;
   border-radius: 10px;
-  background: #fae8ec;
+  background: #FAE8EC;
 }
 
 .nav-container {
@@ -92,7 +89,7 @@ body {
   right: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: end;
   justify-content: center;
   gap: 10px;
   z-index: 10;
@@ -105,12 +102,18 @@ body {
   padding: 15px;
   border-radius: 10px;
   cursor: pointer;
-  background: #d1193e;
-  color: #fae8ec;
+  background: #D1193E;
+  color: #FAE8EC;
 }
 
 .nav-container .button-icon.show {
   display: block;
+}
+
+.nav-container .button-icon.active {
+  background: #FAE8EC;
+  color: #D1193E;
+  border: 5px solid #D1193E;
 }
 
 .nav-container .button-icon i {
@@ -153,8 +156,8 @@ body {
 }
 
 .play-button {
-  background: #d1193e;
-  color: #fae8ec;
+  background: #D1193E;
+  color: #FAE8EC;
   border: none;
   padding: 15px 30px;
   width: 100%;
@@ -258,7 +261,7 @@ body {
   position: relative;
   max-width: 250px;
   width: 100%;
-  height: calc(100vh - 200px);
+  height: calc(100vh - 400px);
   transition: 0.2s;
   animation: fadeInScale 1s ease-out forwards;
 }
@@ -408,6 +411,19 @@ body {
 }
 
 @media (max-width: 412px) {
+  #LeftPocket,
+  #RightPocket,
+  #MainPocket,
+  #FrontPocket {
+    cursor: default;
+  }
+
+  .items,
+  .leaf,
+  .shutter {
+    cursor: default;
+  }
+
   .title-container {
     width: calc(100% - 40px);
   }
