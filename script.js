@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const leaves = document.querySelectorAll(".leaf");
   const photos = document.querySelectorAll(".photo");
   const transitionAudio = new Audio("assets/audio/transition.mp3");
+  const shutterAudio = new Audio("assets/audio/shutter.mp3");
 
   const collectedItems = new Set();
   let activePocket = null;
@@ -174,6 +175,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   shutter.addEventListener("click", () => {
     if (currentPhoto >= photos.length) return;
+
+    shutterAudio.currentTime = 0;
+    shutterAudio.play();
 
     const photo = photos[currentPhoto];
     photo.classList.add("show");
