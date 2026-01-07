@@ -185,7 +185,7 @@ body {
 }
 
 .bag-container.pop {
-  animation: bagPop 0.2s;
+  animation: bagPop 0.2s ease-out forwards;
 }
 
 #LeftPocket,
@@ -259,9 +259,9 @@ body {
   display: none;
   place-items: center;
   position: relative;
-  max-width: 250px;
+  max-width: 350px;
   width: 100%;
-  height: calc(100vh - 400px);
+  height: calc(100vh - 350px);
   transition: 0.2s;
   animation: fadeInScale 1s ease-out forwards;
 }
@@ -271,6 +271,22 @@ body {
 .scroll-container.show,
 .player-container.show {
   display: grid;
+}
+
+.scroll-container #scrollClose,
+.scroll-container #scrollOpen {
+  display: none;
+  cursor: pointer;
+}
+
+.scroll-container #scrollClose.show,
+.scroll-container #scrollOpen.show {
+  display: block;
+}
+
+.scroll-container #scrollClose.pop,
+.scroll-container #scrollOpen.pop {
+  animation: bagPop 0.2s ease-out forwards;
 }
 
 .leaf {
@@ -297,6 +313,16 @@ body {
 
 .photo.show {
   animation: photoPop 7.5s ease-out forwards;
+}
+
+.controls {
+  cursor: pointer;
+}
+
+.controls.pop {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: controlsPop 0.2s ease-out forwards;
 }
 
 @keyframes animX {
@@ -392,38 +418,37 @@ body {
         transform: translateY(0px);
     }
     20% {
-        transform: translateY(50px);
+        transform: translateY(75px);
     }
     40% {
-        transform: translateY(50px);
+        transform: translateY(75px);
     }
     60% {
-        transform: translateY(45px) translateX(-10px) rotate(-20deg);
+        transform: translateY(70px) translateX(-5px) rotate(-20deg);
     }
     80% {
-        transform: translateY(45px) translateX(-10px) rotate(-20deg);
+        transform: translateY(70px) translateX(-5px) rotate(-20deg);
         opacity: 1;
     }
     100% {
-        transform: translateY(60px) translateX(-10px) rotate(-20deg);
+        transform: translateY(100px) translateX(-5px) rotate(-20deg);
         opacity: 0;
     }
 }
 
+@keyframes controlsPop {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.75);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 @media (max-width: 412px) {
-  #LeftPocket,
-  #RightPocket,
-  #MainPocket,
-  #FrontPocket {
-    cursor: default;
-  }
-
-  .items,
-  .leaf,
-  .shutter {
-    cursor: default;
-  }
-
   .title-container {
     width: calc(100% - 40px);
   }
